@@ -1,0 +1,58 @@
+:root{
+  --bg: #0b1222; --card:#f4f6fb; --text:#1b1f2a; --muted:#6b7280; --primary:#2f75ff; --line:#e4e7ee;
+}
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu; background:radial-gradient(80% 60% at 10% 10%, #111 0%, #000 60%)}
+
+/* SHELL + CARD */
+.auth-shell{min-height:100%; display:grid; place-items:center; padding:24px}
+.auth-card{width:min(1100px,95vw); height:80vh; background:linear-gradient(180deg,#161a28 0%,#0e1220 100%);
+  padding:16px; border-radius:28px; box-shadow:0 20px 60px rgba(0,0,0,.45); display:grid; grid-template-columns:1fr 1fr; gap:16px}
+.auth-left{background:var(--card); border-radius:22px; padding:40px; display:flex; flex-direction:column}
+.auth-right{position:relative; background:#071028; border-radius:22px; overflow:hidden}
+.auth-right::before{content:""; position:absolute; inset:-20%; background:radial-gradient(50% 50% at 50% 50%, #59f 0%, #0b1a49 60%, #04102f 100%); filter:blur(16px)}
+.glass{position:absolute; right:24px; bottom:24px; padding:14px 18px; border-radius:18px; background:rgba(255,255,255,.12); color:#cfe1ff; backdrop-filter: blur(6px); box-shadow:0 2px 12px rgba(0,0,0,.25)}
+
+/* HEADER TEXTS */
+.brand{display:flex; align-items:center; gap:10px; margin-bottom:24px}
+.logo{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:#0e1220;color:#fff;font-weight:700}
+.brand-text{font-weight:700;font-size:20px}
+.welcome{margin:0 0 6px 0; color:var(--text); font-size:22px}
+.sub{margin:0 0 16px 0; color:var(--muted); font-size:14px}
+
+/* TABS */
+.tabs{display:flex; gap:10px; background:#eef2ff; width:max-content; padding:6px; border-radius:999px; margin-bottom:18px}
+.tab{padding:8px 18px; border-radius:999px; color:#334; text-decoration:none; font-weight:600}
+.tab.active{background:var(--primary); color:#fff}
+
+/* FORM */
+.form{display:flex; flex-direction:column; gap:14px}
+.field label{display:block; font-size:12px; color:var(--muted); margin-bottom:6px}
+.input-wrap{position:relative}
+.input-wrap input{width:100%; padding:14px 16px; border-radius:14px; border:1px solid var(--line); outline: none; background:#fff}
+.field-error input{border-color:#ef4444}
+.error-text{color:#ef4444; font-size:12px; margin-top:6px}
+
+/* ROWS & LINKS */
+.row{display:flex; align-items:center; gap:10px}
+.row.between{justify-content:space-between}
+.remember{display:flex; align-items:center; gap:8px; color:#4b5563}
+.link{color:#3b82f6; text-decoration:none}
+
+/* BUTTONS */
+.btn{height:44px; border:none; border-radius:16px; font-weight:700; cursor:pointer}
+.btn.primary{background:var(--primary); color:#fff}
+.btn.apple{background:#111; color:#fff}
+.btn.google{background:#fff; border:1px solid var(--line)}
+.btn[disabled]{opacity:.7; cursor:not-allowed}
+
+/* OR DIVIDER */
+.or{position:relative; text-align:center; color:#94a3b8; margin:6px 0}
+.or::before, .or::after {content:""; position:absolute; top:50%; width:45%; height:1px; background:var(--line)}
+.or::before{left:0} .or::after{right:0}
+.or span{background:var(--card); padding:0 10px}
+
+/* SOCIAL ICONS */
+.btn img.icon { height:18px; margin-right:8px; vertical-align:middle; }
+.btn.apple, .btn.google { display:flex; align-items:center; justify-content:center; gap:8px; }
