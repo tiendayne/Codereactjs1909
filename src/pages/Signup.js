@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import TextField from '../components/TextField';
-import { minLen, notEmpty } from '../utils/validators';
-import { register } from '../service/auth/registerService';
+import TextField from '../shared/components/TextField';
+import { minLen, notEmpty } from '../shared/utils/validators';
+import { register } from '../services/auth/registerService';
 
 export default function Signup() {
   const [form, setForm] = useState({ username: '', password: '', confirm: '', security_question: '', security_answer: '' });

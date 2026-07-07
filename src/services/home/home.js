@@ -1,4 +1,4 @@
-import api from '../config/axiosconfig';
+import api from '../../config/axios/axiosConfig';
 
 export const getHomeData = async ({ token, username } = {}) => {
   const response = await api.get('/home', {

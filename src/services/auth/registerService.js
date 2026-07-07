@@ -1,4 +1,4 @@
-import api from '../../config/axiosconfig';
+import api from '../../config/axios/axiosConfig';
 
 export const register = async ({ username, password, security_question, security_answer }) => {
   const response = await api.post('/users/register', {

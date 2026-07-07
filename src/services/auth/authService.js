@@ -1,14 +1,4 @@
-import axios from 'axios';
-
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:3000/api/v1';
-
-const api = axios.create({
-  baseURL: API_BASE_URL,
-  timeout: 10000,
-  headers: {
-    'Content-Type': 'application/json',
-  },
-});
+import api from '../../config/axios/axiosConfig';
 
 export const login = async ({ username, password }) => {
   const response = await api.post('/users/login', { username, password });

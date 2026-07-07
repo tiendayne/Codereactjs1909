@@ -1,10 +1,10 @@
 // src/pages/Login.js
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import TextField from '../components/TextField';
-import { minLen, notEmpty } from '../utils/validators';
-import { forgotPassword } from '../service/auth/forgotpassword';
-import { login } from '../service/auth/loginService';
+import TextField from '../shared/components/TextField';
+import { minLen, notEmpty } from '../shared/utils/validators';
+import { forgotPassword } from '../services/auth/forgotPasswordService';
+import { login } from '../services/auth/loginService';
 
 // Font Awesome: dùng import icon trực tiếp (KHÔNG dùng import.macro)
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
